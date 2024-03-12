@@ -51,8 +51,9 @@
     "wpackagist-plugin/svg-support": "*",
     "wpackagist-plugin/make-column-clickable-elementor": "*",
     "wpackagist-plugin/enable-media-replace": "*",
-    "stayallive/wp-sentry": "^6.26" 
-    
+    "stayallive/wp-sentry": "^6.26",
+    "wpackagist-plugin/polylang": "*",
+    "wpackagist-plugin/official-mailerlite-sign-up-forms": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
