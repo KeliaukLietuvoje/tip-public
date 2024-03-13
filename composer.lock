@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "450e46c6e86161fbf4e68f2286315048",
+    "content-hash": "033a46a88a3d298d7e5303ab0bcf93cf",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -2574,6 +2574,24 @@
             "homepage": "https://wordpress.org/plugins/amazon-s3-and-cloudfront/"
         },
         {
+            "name": "wpackagist-plugin/connect-polylang-elementor",
+            "version": "2.4.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/connect-polylang-elementor/",
+                "reference": "tags/2.4.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/connect-polylang-elementor.2.4.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/connect-polylang-elementor/"
+        },
+        {
             "name": "wpackagist-plugin/elementor",
             "version": "3.20.0",
             "source": {
@@ -2797,12 +2815,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "c02629d91815a7c173f0b4ed4cb7d90eb37f5709"
+                "reference": "f5eb6c99c181efe59f82027eb7bef49c7d7bd0bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/c02629d91815a7c173f0b4ed4cb7d90eb37f5709",
-                "reference": "c02629d91815a7c173f0b4ed4cb7d90eb37f5709",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/f5eb6c99c181efe59f82027eb7bef49c7d7bd0bc",
+                "reference": "f5eb6c99c181efe59f82027eb7bef49c7d7bd0bc",
                 "shasum": ""
             },
             "conflict": {
@@ -2954,7 +2972,7 @@
                 "ezsystems/ezplatform-solr-search-engine": ">=1.7,<1.7.12|>=2,<2.0.2|>=3.3,<3.3.15",
                 "ezsystems/ezplatform-user": ">=1,<1.0.1",
                 "ezsystems/ezpublish-kernel": "<6.13.8.2-dev|>=7,<7.5.31",
-                "ezsystems/ezpublish-legacy": "<=2017.12.7.3|>=2018.06,<=2019.03.5.1",
+                "ezsystems/ezpublish-legacy": "<=2017.12.7.3|>=2018.6,<=2019.03.5.1",
                 "ezsystems/platform-ui-assets-bundle": ">=4.2,<4.2.3",
                 "ezsystems/repository-forms": ">=2.3,<2.3.2.1-dev|>=2.5,<2.5.15",
                 "ezyang/htmlpurifier": "<4.1.1",
@@ -3529,7 +3547,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-03-12T13:04:19+00:00"
+            "time": "2024-03-13T08:04:43+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

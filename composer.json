@@ -53,7 +53,8 @@
     "wpackagist-plugin/enable-media-replace": "*",
     "stayallive/wp-sentry": "^6.26",
     "wpackagist-plugin/polylang": "*",
-    "wpackagist-plugin/official-mailerlite-sign-up-forms": "*"
+    "wpackagist-plugin/official-mailerlite-sign-up-forms": "*",
+    "wpackagist-plugin/connect-polylang-elementor": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
