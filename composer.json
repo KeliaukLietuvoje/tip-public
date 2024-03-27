@@ -30,6 +30,9 @@
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
     }
   ],
+  "replace": {
+    "php-http/message-factory": "*"
+  },
   "require": {
     "php": ">=7.4",
     "composer/installers": "^2.2",
