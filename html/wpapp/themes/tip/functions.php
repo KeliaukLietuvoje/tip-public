@@ -43,8 +43,6 @@ add_filter('wp_sitemaps_add_provider', function ($provider, $name) {
 if (! function_exists('tip_scripts_styles')) {
     function tip_scripts_styles()
     {
-        wp_enqueue_style('font-tip', TIP_THEME_URL . '/inc/elementor/css/tip-custom.css', array(), TIP_VERSION);
-
         wp_enqueue_style(
             'tip',
             get_template_directory_uri() . '/style.css',
@@ -122,66 +120,6 @@ function tip_tab_shortcode($atts)
 }
 add_shortcode('tip_tab', 'tip_tab_shortcode');
 
-
-function is_dir_empty($dir)
-{
-    if (!is_readable($dir)) {
-        return null; // when the directory is unreadable
-    }
-    return (count(glob("$dir/*")) === 0);
-}
-
-// Automatically purge and regenerate the Elementor CSS cache
-add_action('init', 'clear_elementor_cache');
-function clear_elementor_cache()
-{
-    if (is_dir_empty($_SERVER['DOCUMENT_ROOT'] . '/wpapp/uploads/elementor/css')) {
-        if (! did_action('elementor/loaded')) {
-            return;
-        }
-        \Elementor\Plugin::$instance->files_manager->clear_cache();
-    }
-}
-if (!function_exists('tip_elementor_is_activated')) {
-    function tip_elementor_is_activated()
-    {
-        if(function_exists('elementor_load_plugin_textdomain')) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
-if (! function_exists('tip_elementor_is_edit_mode')) {
-    function tip_elementor_is_edit_mode()
-    {
-        if(!tip_elementor_is_activated()) {
-            return false;
-        }
-
-        return Elementor\Plugin::$instance->editor->is_edit_mode();
-    }
-}
-if (! function_exists('tip_elementor_is_preview_mode')) {
-    function tip_elementor_is_preview_mode()
-    {
-        if(!tip_elementor_is_activated()) {
-            return false;
-        }
-
-        return Elementor\Plugin::$instance->preview->is_preview_mode();
-    }
-}
-
-if (! function_exists('tip_elementor_is_preview_page')) {
-    function tip_elementor_is_preview_page()
-    {
-        return isset($_GET['preview_id']);
-    }
-}
-if(tip_elementor_is_activated()) {
-    require_once TIP_THEME_DIR .'/inc/class-elementor.php';
-}
-if(!function_exists('tip_sitemap')){
+if(!function_exists('ntis_sitemap')){
     require_once TIP_THEME_DIR .'/inc/shortcodes/sitemap/sitemap.php';
 }
