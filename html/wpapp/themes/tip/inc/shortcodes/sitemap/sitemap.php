@@ -8,7 +8,7 @@ class NTIS_Sitemap
     }
     public function sitemap($atts)
     {
-        wp_enqueue_style('sitemap-shortcode-styles', NTIS_THEME_URL . '/inc/shortcodes/sitemap/sitemap.css', [], '1.0', 'all');
+        wp_enqueue_style('sitemap-shortcode-styles', TIP_THEME_URL . '/inc/shortcodes/sitemap/sitemap.css', [], '1.0', 'all');
 
         $custom_posts_heading = isset($atts['custom_posts_heading']) && !empty($atts['custom_posts_heading']) ? sanitize_text_field($atts['custom_posts_heading']) : '';
         $custom_pages_heading = isset($atts['custom_pages_heading']) && !empty($atts['custom_pages_heading']) ? sanitize_text_field($atts['custom_pages_heading']) : '';
