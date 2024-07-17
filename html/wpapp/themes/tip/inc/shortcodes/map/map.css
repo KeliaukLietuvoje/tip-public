@@ -1,0 +1,9 @@
+.tip-map__wrapper{
+    border-radius:16px;
+    padding:8px;
+    border:1px solid #E3E8EF;
+}
+#tip-map{
+    border-radius:16px;
+    width:100%;
+}
