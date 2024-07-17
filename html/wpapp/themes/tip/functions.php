@@ -120,6 +120,12 @@ function tip_tab_shortcode($atts)
 }
 add_shortcode('tip_tab', 'tip_tab_shortcode');
 
-if(!function_exists('ntis_sitemap')){
+if(!function_exists('ntis_sitemap')) {
     require_once TIP_THEME_DIR .'/inc/shortcodes/sitemap/sitemap.php';
+}
+if(!class_exists('NTIS_Contact_Form')) {
+    require_once TIP_THEME_DIR .'/inc/shortcodes/contact-form/contact-form.php';
+}
+if(!class_exists('TIP_Map')) {
+    require_once TIP_THEME_DIR .'/inc/shortcodes/map/map.php';
 }
