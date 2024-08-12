@@ -1,4 +1,5 @@
 <?php
+
 defined('ABSPATH') || exit;
 
 class TIP_Map
@@ -11,12 +12,12 @@ class TIP_Map
     {
         $atts = shortcode_atts(
             array(
-                'coordinates' => '23.7486, 55.0904', 
+                'coordinates' => '23.7486, 55.0904',
                 'zoom' => '7',
                 'pin' => TIP_THEME_URL . '/inc/shortcodes/map/pin3.svg',
                 'pin_size' => '26,38',
                 'map_height' => '800px',
-                'add_layer'=> 'false'
+                'add_layer' => 'false'
             ),
             $atts,
             'tip_map'
@@ -30,13 +31,14 @@ class TIP_Map
         wp_enqueue_style('tip-map-styles', TIP_THEME_URL . '/inc/shortcodes/map/map.css', [], $tip_map_css_ver, 'all');
         wp_enqueue_script('tip-map-js', TIP_THEME_URL . '/inc/shortcodes/map/map.js', ['jquery'], $tip_map_js_ver, true);
 
-        
+
         wp_localize_script('tip-map-js', 'tip_map_config', array(
-            'coordinates' => explode(',',$atts['coordinates']),
+            'api' => ['url' => TIP_API_URL],
+            'coordinates' => explode(',', $atts['coordinates']),
             'zoom' => (int)$atts['zoom'],
             'pin' => [
-                'url'=>$atts['pin'],
-                'size'=> explode(',',$atts['pin_size'])
+                'url' => $atts['pin'],
+                'size' => explode(',', $atts['pin_size'])
             ],
             'add_layer' => $atts['add_layer']
         ));

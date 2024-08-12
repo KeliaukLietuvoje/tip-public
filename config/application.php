@@ -64,6 +64,7 @@ Config::define('MINIO_USESSL', env('MINIO_USESSL') == 'true');
 Config::define('BUCKET_URL', env('BUCKET_URL'));
 
 Config::define('POSTMARK_API_TOKEN', env('POSTMARK_API_TOKEN'));
+Config::define('TIP_API_URL', env('TIP_API_URL'));
 
 /**
  * Custom Content Directory
