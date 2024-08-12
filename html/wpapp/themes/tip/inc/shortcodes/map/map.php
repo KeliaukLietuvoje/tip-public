@@ -33,7 +33,7 @@ class TIP_Map
 
 
         wp_localize_script('tip-map-js', 'tip_map_config', array(
-            'api' => ['url' => NTIS_API_URL],
+            'api' => ['url' => TIP_API_URL],
             'coordinates' => explode(',', $atts['coordinates']),
             'zoom' => (int)$atts['zoom'],
             'pin' => [
