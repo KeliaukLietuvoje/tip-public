@@ -57,7 +57,8 @@
     "wpackagist-plugin/polylang": "*",
     "wpackagist-plugin/cookiebot": "*",
     "wpackagist-plugin/official-mailerlite-sign-up-forms": "*",
-    "wpackagist-plugin/connect-polylang-elementor": "*"
+    "wpackagist-plugin/connect-polylang-elementor": "*",
+    "wpackagist-plugin/theme-translation-for-polylang": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.7.1",
